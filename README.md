@@ -14,22 +14,6 @@
 
 ---
 
-## 🛠️ 环境要求
-
-- Python 3.9+
-- 依赖包：见 `requirements.txt`
-
-### 主要依赖库
-
-```text
-torch
-chromadb
-langchain-community
-dashscope
-mineru[core]
-python-dotenv
-doclayout-yolo
-```
 
 > **注意**：MinerU 需要额外安装其核心依赖，请参考 [MinerU 官方文档](https://github.com/opendatalab/MinerU)。
 
@@ -37,37 +21,17 @@ doclayout-yolo
 
 ## 📦 安装与配置
 
-### 1. 克隆项目
-
-```bash
-git clone https://github.com/your-repo/financial-rag.git
-cd financial-rag
-```
-
-### 2. 安装依赖
-
-建议使用虚拟环境：
-
-```bash
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-
-pip install -r requirements.txt
-```
-
-### 3. 配置 API 密钥
+###  配置 API 密钥
 
 创建 `.env` 文件（或设置系统环境变量）：
-
-```ini
+```
 DASHSCOPE_API_KEY=your-dashscope-api-key
 EMBEDDING_MODEL=text-embedding-v2   # 可选，默认 text-embedding-v2
 ```
 
 > 获取 DashScope API 密钥：[阿里云灵积控制台](https://dashscope.console.aliyun.com/)
 
-### 4. 准备 PDF 文件
+###  准备 PDF 文件
 
 在项目根目录下创建 `my_pdfs/` 文件夹，放入待分析的财务报告 PDF 文件。
 
